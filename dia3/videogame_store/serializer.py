@@ -1,12 +1,12 @@
 from rest_framework import serializers
-from .models import jogo, Loja
+from .models import Jogos, Loja
 
-class jogoSerializer(serializers.ModelSerializer):
-    class meta:
-        model = jogo 
-        fildes = ['nome', 'preco']
+class JogoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Jogos 
+        fields = ['nome', 'preco']
 
 class LojaSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model = Loja
-        fildes = ['nome', 'endereco', 'telefone']
+        fields = ['nome', 'endereco', 'telefone']

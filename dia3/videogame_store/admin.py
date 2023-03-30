@@ -1,14 +1,14 @@
 from django.contrib import admin
-from .models import jogos, loja
+from .models import Jogos, Loja
 
 # Register your models here.
 
-class jogosAdmin(admin.ModelAdmin):
+class JogosAdmin(admin.ModelAdmin):
     list_display = ('nome', 'preco')
 
-admin.site.register(jogos, jogosAdmin)
+admin.site.register(Jogos, JogosAdmin)
 
-class lojaAdmin(admin.ModelAdmin):
+class LojaAdmin(admin.ModelAdmin):
     list_display = ('nome', 'endereco', 'telefone')
 
-admin.site.register(loja, lojaAdmin)
+admin.site.register(Loja, LojaAdmin)
