@@ -16,3 +16,11 @@ class Loja(models.Model):
 
         def __str__(self):
              return self.nome
+        
+class Cliente(models.Model):
+     nome = models.CharField(max_length=100)
+     cpf = models.CharField(max_length=11)
+     numero = models.CharField(max_length=11)
+
+     def __str__(self):
+          return self.nome
